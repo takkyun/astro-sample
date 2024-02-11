@@ -6,7 +6,6 @@ import Head from './Head.astro';
 
 export interface Props extends HeadProps {
   lang?: 'ja' | 'en';
-  children?: any;
 }
 
 const { lang = 'ja', ...rest } = Astro.props;
