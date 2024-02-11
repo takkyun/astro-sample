@@ -21,6 +21,6 @@ export const imagePath = async (src: ImageMetadata, type = 'webp') => (await get
 
 export const images = await (async () =>
   (await Promise.all(Object.entries(imageMap).map(async ([key, src]) => [key, await imagePath(src)]))).reduce(
-    (acc, [key, path]) => ({ ...acc, [`imgurl-${key}`]: `url(${path})` }),
+    (acc, [key, path]) => ({ ...acc, [`imgurl-${key.replace(/_/g, '-')}`]: `url(${path})` }),
     {},
   ))();
