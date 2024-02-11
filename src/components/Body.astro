@@ -1,0 +1,17 @@
+---
+---
+<body>
+  <slot />
+</body>
+<style>
+  body {
+    color: #445;
+    background-color: #fff;
+    background-image: var(--imgurl-header-mobile);
+    @media screen and (min-width: 768px) {
+      background-image: var(--imgurl-header-desktop);
+    }
+    background-repeat: repeat-x;
+    background-position: 0% 0%;
+  }
+</style>
