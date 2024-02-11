@@ -1,9 +1,17 @@
 import type { ImageMetadata } from 'astro';
 import { getImage } from 'astro:assets';
 
+import imageFooterBlue from '../assets/footer-blue.png';
+import imageFooterGreen from '../assets/footer-green.png';
+import imageHeaderBlue from '../assets/header-blue.png';
+import imageHeaderGreen from '../assets/header-green.png';
+
 // list of all images to be used as css resources.
 const imageMap = {
-  // put your images here
+  header_desktop: imageHeaderBlue,
+  header_mobile: imageHeaderGreen,
+  footer_desktop: imageFooterBlue,
+  footer_mobile: imageFooterGreen,
 } as Record<string, ImageMetadata>;
 
 export const imageType = (src: string) =>
