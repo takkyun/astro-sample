@@ -16,7 +16,7 @@ const { lang = 'ja', ...rest } = Astro.props;
 <html lang={lang}>
   <head>
     <Head {...rest} />
-    <style define:vars={{ ...images }}></style>
+    <style is:global define:vars={{ ...images }}></style>
   </head>
   <slot />
 </html>
