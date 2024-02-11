@@ -1,16 +1,18 @@
 ---
+import Base from 'components/Base.astro';
 
+import faviconImage from '../assets/favicon.png';
+import { imagePath } from 'styles/images';
+
+const baseProps = {
+  title: 'Astro',
+  description: 'A playgounrd for Astro.',
+  favicon: await imagePath(faviconImage),
+};
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
+<Base {...baseProps}>
   <body>
-    <h1>Astro</h1>
+    <h1>My Astro Site</h1>
   </body>
-</html>
+</Base>

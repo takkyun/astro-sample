@@ -1,0 +1,22 @@
+---
+import { images } from 'styles/images';
+
+import type { Props as HeadProps } from './Head.astro';
+import Head from './Head.astro';
+
+export interface Props extends HeadProps {
+  lang?: 'ja' | 'en';
+  children?: any;
+}
+
+const { lang = 'ja', ...rest } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <Head {...rest} />
+    <style define:vars={{ ...images }}></style>
+  </head>
+  <slot />
+</html>
